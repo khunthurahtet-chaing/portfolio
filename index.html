@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khun Thura Htet | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind = {
+            config: {
+                theme: {
+                    extend: {
+                        colors: {
+                            navy: '#071126',
+                            blue: '#1d4ed8',
+                            cyan: '#22d3ee'
+                        },
+                        boxShadow: {
+                            glow: '0 0 0 1px rgba(34, 211, 238, 0.2), 0 20px 60px rgba(2, 132, 199, 0.18)'
+                        },
+                        animation: {
+                            float: 'float 4.5s ease-in-out infinite'
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { color-scheme: dark; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.24), transparent 30%), linear-gradient(135deg, #020617 0%, #071126 42%, #0f172a 100%);
+        }
+        .glass {
+            backdrop-filter: blur(18px);
+            background: rgba(8, 15, 31, 0.76);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+        }
+        .section-title {
+            background: linear-gradient(90deg, #67e8f9, #60a5fa);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        .animate-float { animation: float 4.5s ease-in-out infinite; }
+        .slide { display: none; }
+        .slide.active { display: block; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-100 antialiased">
+    <div class="relative overflow-hidden">
+        <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.16),transparent_30%)]"></div>
+
+        <header class="sticky top-0 z-50">
+            <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+                <a href="#home" class="text-lg font-semibold tracking-[0.25em] text-cyan-300">KTH</a>
+                <ul class="flex items-center gap-4 text-sm font-medium text-slate-300">
+                    <li><a class="transition hover:text-cyan-300" href="#home">Home</a></li>
+                    <li><a class="transition hover:text-cyan-300" href="#certificates">Certificates</a></li>
+                    <li><a class="transition hover:text-cyan-300" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="px-6 py-20 lg:px-8 lg:py-24">
+                <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+                    <div class="space-y-6">
+                        <span class="inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-sm font-medium text-cyan-300">
+                            <span class="mr-2 h-2.5 w-2.5 rounded-full bg-cyan-300"></span>
+                            Available for new opportunities
+                        </span>
+                        <div class="space-y-4">
+                            <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+                                I design modern<br>
+                                <span class="section-title">digital experiences</span>
+                            </h1>
+                            <p class="max-w-2xl text-lg leading-8 text-slate-300">
+                                I’m Khun Thura Htet, a developer who blends clean code, elegant UI, and thoughtful product design to build fast, polished websites.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#certificates" class="rounded-full bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:-translate-y-1 hover:bg-cyan-300">View My Work</a>
+                            <a href="#contact" class="rounded-full border border-slate-600 px-6 py-3 font-semibold text-slate-100 transition hover:border-cyan-300 hover:text-cyan-300">Contact Me</a>
+                        </div>
+                        <div class="flex flex-wrap gap-4 text-sm text-slate-300">
+                            <span class="rounded-full border border-slate-700 bg-slate-900/50 px-3 py-2"><i class="fa-solid fa-code mr-2 text-cyan-300"></i>HTML, CSS, JS</span>
+                            <span class="rounded-full border border-slate-700 bg-slate-900/50 px-3 py-2"><i class="fa-solid fa-layer-group mr-2 text-cyan-300"></i>Responsive UI</span>
+                            <span class="rounded-full border border-slate-700 bg-slate-900/50 px-3 py-2"><i class="fa-solid fa-rocket mr-2 text-cyan-300"></i>Modern Web Apps</span>
+                        </div>
+                    </div>
+
+                    <div class="animate-float">
+                        <div class="glass rounded-[28px] p-4 shadow-glow sm:p-5">
+                            <div class="overflow-hidden rounded-[24px] border border-slate-700/70 bg-slate-900/60 p-2">
+                                <img src="images/profile.jpg" alt="Khun Thura Htet" class="h-64 w-full rounded-[18px] object-contain object-center bg-slate-950 sm:h-80">
+                            </div>
+                            <div class="mt-5 grid gap-3 sm:grid-cols-2">
+                                <div class="rounded-2xl border border-slate-700 bg-slate-900/60 p-4">
+                                    <p class="text-sm text-slate-400">Experience</p>
+                                    <p class="mt-1 font-semibold text-white">Frontend & Backend</p>
+                                </div>
+                                <div class="rounded-2xl border border-slate-700 bg-slate-900/60 p-4">
+                                    <p class="text-sm text-slate-400">Focus</p>
+                                    <p class="mt-1 font-semibold text-white">Clean, fast UI</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certificates" class="px-6 py-20 lg:px-8">
+                <div class="mx-auto max-w-6xl">
+                    <div class="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+                        <div>
+                            <p class="text-sm uppercase tracking-[0.35em] text-cyan-300">Featured work</p>
+                            <h2 class="section-title text-3xl font-semibold sm:text-4xl">Certificates & achievements</h2>
+                        </div>
+                        <p class="max-w-xl text-slate-300">
+                            These credentials reflect a strong foundation in computer science, modern development, and practical problem solving.
+                        </p>
+                    </div>
+
+                    <div class="glass rounded-[30px] p-4 shadow-glow">
+                        <div class="slideshow-container overflow-hidden rounded-[24px]">
+                            <div class="slide active">
+                                <div class="overflow-hidden rounded-[22px] border border-slate-700/70 bg-slate-900/60 p-2">
+                                    <img src="images/certificate1.png" alt="Certificate 1" class="h-[280px] w-full object-contain sm:h-[380px]">
+                                </div>
+                                <div class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                                    <p class="text-slate-300">Harvard CS50 certificate</p>
+                                    <a href="https://cs50.harvard.edu/certificates/8a248ede-b54f-47b6-9d31-04f01a450031" target="_blank" class="inline-flex items-center justify-center rounded-full bg-cyan-400 px-4 py-2 font-semibold text-slate-950 transition hover:bg-cyan-300">View Certificate</a>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="overflow-hidden rounded-[22px] border border-slate-700/70 bg-slate-900/60 p-2">
+                                    <img src="images/certificate2.png" alt="Certificate 2" class="h-[280px] w-full object-contain sm:h-[380px]">
+                                </div>
+                                <div class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                                    <p class="text-slate-300">Credly badge for technical learning</p>
+                                    <a href="https://www.credly.com/badges/646b760b-d66e-4836-a12f-4f10ff6a4acb" target="_blank" class="inline-flex items-center justify-center rounded-full bg-cyan-400 px-4 py-2 font-semibold text-slate-950 transition hover:bg-cyan-300">View Certificate</a>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="overflow-hidden rounded-[22px] border border-slate-700/70 bg-slate-900/60 p-2">
+                                    <img src="images/certificate3.png" alt="Certificate 3" class="h-[280px] w-full object-contain sm:h-[380px]">
+                                </div>
+                                <div class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                                    <p class="text-slate-300">Additional industry recognition</p>
+                                    <a href="https://www.credly.com/badges/540d3c9b-4c41-4b8d-b713-5796a12032ba" target="_blank" class="inline-flex items-center justify-center rounded-full bg-cyan-400 px-4 py-2 font-semibold text-slate-950 transition hover:bg-cyan-300">View Certificate</a>
+                                </div>
+                            </div>
+                            <button class="prev absolute left-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-slate-950/60 text-lg transition hover:bg-slate-900" onclick="plusSlides(-1)">❮</button>
+                            <button class="next absolute right-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-slate-950/60 text-lg transition hover:bg-slate-900" onclick="plusSlides(1)">❯</button>
+                        </div>
+                        <div class="dots-container mt-4 flex justify-center gap-2">
+                            <span class="dot h-2.5 w-2.5 cursor-pointer rounded-full bg-slate-600 transition hover:bg-cyan-300" onclick="currentSlide(1)"></span>
+                            <span class="dot h-2.5 w-2.5 cursor-pointer rounded-full bg-slate-600 transition hover:bg-cyan-300" onclick="currentSlide(2)"></span>
+                            <span class="dot h-2.5 w-2.5 cursor-pointer rounded-full bg-slate-600 transition hover:bg-cyan-300" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="px-6 py-20 lg:px-8">
+                <div class="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+                    <div class="glass rounded-[30px] p-8 shadow-glow">
+                        <p class="text-sm uppercase tracking-[0.35em] text-cyan-300">Get in touch</p>
+                        <h2 class="mt-3 text-3xl font-semibold text-white">Let’s build something impactful.</h2>
+                        <p class="mt-4 text-slate-300">
+                            Whether you need a new landing page, portfolio, or web app, I’d love to help turn your idea into a polished experience.
+                        </p>
+                        <div class="mt-6 space-y-3 text-slate-300">
+                            <p><i class="fa-solid fa-phone mr-2 text-cyan-300"></i> +95 9254663981</p>
+                            <p><i class="fa-solid fa-envelope mr-2 text-cyan-300"></i> khunthurahtet@gmail.com</p>
+                        </div>
+                        <div class="mt-6 flex gap-3">
+                            <a href="https://github.com/khunthurahtet-chaing" target="_blank" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-900/60 text-slate-100 transition hover:border-cyan-300 hover:text-cyan-300"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/khun-thura-htet-33676694/" target="_blank" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-900/60 text-slate-100 transition hover:border-cyan-300 hover:text-cyan-300"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.credly.com/users/khun-thura-htet.7e52f4d3" target="_blank" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-900/60 text-slate-100 transition hover:border-cyan-300 hover:text-cyan-300"><i class="fa-solid fa-award"></i></a>
+                        </div>
+                    </div>
+
+                    <form action="https://formsubmit.co/khunthurahtet@gmail.com" method="POST" class="glass rounded-[30px] p-8 shadow-glow">
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <input type="text" name="name" placeholder="Your Name" required class="rounded-2xl border border-slate-700 bg-slate-900/70 px-4 py-3 text-slate-100 outline-none ring-0 transition focus:border-cyan-400">
+                            <input type="email" name="email" placeholder="Your Email" required class="rounded-2xl border border-slate-700 bg-slate-900/70 px-4 py-3 text-slate-100 outline-none ring-0 transition focus:border-cyan-400">
+                        </div>
+                        <textarea name="message" placeholder="Your Message" required class="mt-4 min-h-[150px] w-full rounded-2xl border border-slate-700 bg-slate-900/70 px-4 py-3 text-slate-100 outline-none transition focus:border-cyan-400"></textarea>
+                        <input type="hidden" name="_subject" value="New portfolio message from your website">
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" class="mt-4 rounded-full bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="px-6 py-8 text-center text-sm text-slate-400 lg:px-8">
+            <p>&copy; 2026 Khun Thura Htet. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
