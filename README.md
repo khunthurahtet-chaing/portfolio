@@ -37,14 +37,15 @@ Git & GitHub
 Version control and hosting
 
 📂 Project Structure
-``
+```
 portfolio/
 ├── index.html
 ├── /images
 │── style.css
 ├── scripts.js
 └── README.md
-``
+```
+
 ⚙️ Setup Instructions
 
 Clone the repository:
