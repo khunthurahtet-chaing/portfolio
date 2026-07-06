@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khun Thura Htet | Portfolio</title>
-
-    <!-- Content Security Policy (meta form for static hosts). Adjust after testing. -->
-    <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self';
-                   script-src 'self' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com;
-                   connect-src 'self';
-                   img-src 'self' data:;
-                   style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
-                   object-src 'none';
-                   base-uri 'self';
-                   frame-ancestors 'none';
-                   form-action 'self';">
-
-    <!-- Basic security headers (meta fallbacks; real headers are better) -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta name="referrer" content="no-referrer">
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind config moved to external file to avoid inline scripts -->
-    <script src="/scripts/tailwind-config.js"></script>
+    <script>
+        tailwind = {
+            config: {
+                theme: {
+                    extend: {
+                        colors: {
+                            navy: '#071126',
+                            blue: '#1d4ed8',
+                            cyan: '#22d3ee'
+                        },
+                        boxShadow: {
+                            glow: '0 0 0 1px rgba(34, 211, 238, 0.2), 0 20px 60px rgba(2, 132, 199, 0.18)'
+                        },
+                        animation: {
+                            float: 'float 4.5s ease-in-out infinite'
+                        }
+                    }
+                }
+            }
+        };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <style>
         :root { color-scheme: dark; }
         body {
@@ -160,10 +159,8 @@
                                     <a href="https://www.credly.com/badges/540d3c9b-4c41-4b8d-b713-5796a12032ba" target="_blank" class="inline-flex items-center justify-center rounded-full bg-cyan-400 px-4 py-2 font-semibold text-slate-950">View</a>
                                 </div>
                             </div>
-
-                            <!-- navigation buttons (no inline handlers) -->
-                            <button id="prevBtn" class="prev absolute left-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-slate-950/60 text-lg text-white">‹</button>
-                            <button id="nextBtn" class="next absolute right-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-slate-950/60 text-lg text-white">›</button>
+                            <button class="prev absolute left-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-slate-950/60 text-lg text-white">‹</button>
+                            <button class="next absolute right-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-slate-950/60 text-lg text-white">›</button>
                         </div>
                         <div class="dots-container mt-4 flex justify-center gap-2">
                             <span class="dot h-2.5 w-2.5 cursor-pointer rounded-full bg-slate-600 transition hover:bg-cyan-300" data-slide="1"></span>
@@ -187,9 +184,15 @@
                             <p><i class="fa-solid fa-envelope mr-2 text-cyan-300"></i> khunthurahtet@gmail.com</p>
                         </div>
                         <div class="mt-6 flex gap-3">
-                            <a href="https://github.com/khunthurahtet-chaing" target="_blank" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-900/60"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/khun-thura-htet-33676694/" target="_blank" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-900/60"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://www.credly.com/users/khun-thura-htet.7e52f4d3" target="_blank" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-900/60"><i class="fa-solid fa-award"></i></a>
+                            <a href="https://github.com/khunthurahtet-chaing" target="_blank" rel="noopener noreferrer" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-900/60 text-slate-100 hover:bg-slate-800">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/khun-thura-htet-33676694/" target="_blank" rel="noopener noreferrer" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-900/60 text-slate-100 hover:bg-slate-800">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.credly.com/users/khun-thura-htet.7e52f4d3" target="_blank" rel="noopener noreferrer" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-900/60 text-slate-100 hover:bg-slate-800">
+                                <i class="fa-solid fa-award"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -212,11 +215,6 @@
         </footer>
     </div>
 
-    <!-- Vendor DOMPurify (loader stub). Replace with a vendored copy for offline hosting. -->
-    <script src="/vendor/dompurify.min.js" defer></script>
-    <!-- Sanitizer helper (uses DOMPurify if available, otherwise a safe fallback) -->
-    <script src="/scripts/sanitize.js" defer></script>
-    <!-- Main scripts -->
-    <script src="/script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
